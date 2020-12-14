@@ -79,6 +79,9 @@ For leaf nodes 0x4FFFFFFE, if %ecx (on input) contains a value not defined by th
      cpuid -l  0x4ffffffd -s 7 etc
      ```
 
+ Screenshots 
+
+ ![Login Page](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image.jpeg)
 Case 2 :- For leaf nodes 0x4FFFFFFE, if %ecx (on input) contains a value not defined by the SDM, return 0 in all %eax, %ebx, %ecx registers and 0xFFFFFFFF in %edx. 
 
     For exit numbers 35, 38, 42, 65, >=69
@@ -100,10 +103,32 @@ Case 3 :-  For exit types not enabled in KVM, return 0s in all four registers.
     These exit numbers return 0 in all the below registers. These exit numbers are not enabled in KVM.
 
 
+
+Screeshots of the above observed behavior
+
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image2.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image3.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image4.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image5.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image6.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image7.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image8.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image9.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image10.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image11.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image12.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image13.jpeg)
+![](https://github.com/ANANTHUPADHYA/VT-CMPE283-Assignment-3/blob/master/images/Image14.jpeg)
+
+
 We wrote a shell script which would run for all the exit numbers and the output is captured. Also note that the value stored in these registers are in hexadecimal format.
 
-The output of shell script
+The output of shell script can be seen in the above screenshots
 
 
 
+* Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
 
+
+* Of the exit types defined in the SDM, which are the most frequent? Least?
